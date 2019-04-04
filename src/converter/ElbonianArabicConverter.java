@@ -51,14 +51,14 @@ public class ElbonianArabicConverter {
 
             }
 
-            int count_N = number.chars().filer(c -> c == 'N').count();
-            int count_M = number.chars().filer(c -> c == 'M').count();
-            int count_D = number.chars().filer(c -> c == 'D').count();
-            int count_C = number.chars().filer(c -> c == 'C').count();
-            int count_Y = number.chars().filer(c -> c == 'Y').count();
-            int count_X = number.chars().filer(c -> c == 'X').count();
-            int count_J = number.chars().filer(c -> c == 'J').count();
-            int count_I = number.chars().filer(c -> c == 'I').count();
+            int count_N = (int) number.chars().filter(c -> c == 'N').count();
+            int count_M = (int)number.chars().filter(c -> c == 'M').count();
+            int count_D = (int)number.chars().filter(c -> c == 'D').count();
+            int count_C = (int)number.chars().filter(c -> c == 'C').count();
+            int count_Y = (int)number.chars().filter(c -> c == 'Y').count();
+            int count_X = (int)number.chars().filter(c -> c == 'X').count();
+            int count_J = (int)number.chars().filter(c -> c == 'J').count();
+            int count_I = (int)number.chars().filter(c -> c == 'I').count();
 
             if((count_M > 2) || (count_C > 2) ||
                     (count_X > 2) || (count_I > 2)
@@ -169,14 +169,14 @@ public class ElbonianArabicConverter {
             // divide things by numbers and get remainders
             int result = 0;
 
-            int count_N = number.chars().filer(c -> c == 'N').count();
-            int count_M = number.chars().filer(c -> c == 'M').count();
-            int count_D = number.chars().filer(c -> c == 'D').count();
-            int count_C = number.chars().filer(c -> c == 'C').count();
-            int count_Y = number.chars().filer(c -> c == 'Y').count();
-            int count_X = number.chars().filer(c -> c == 'X').count();
-            int count_J = number.chars().filer(c -> c == 'J').count();
-            int count_I = number.chars().filer(c -> c == 'I').count();
+            int count_N = (int) number.chars().filter(c -> c == 'N').count();
+            int count_M = (int) number.chars().filter(c -> c == 'M').count();
+            int count_D = (int) number.chars().filter(c -> c == 'D').count();
+            int count_C = (int) number.chars().filter(c -> c == 'C').count();
+            int count_Y = (int) number.chars().filter(c -> c == 'Y').count();
+            int count_X = (int) number.chars().filter(c -> c == 'X').count();
+            int count_J = (int) number.chars().filter(c -> c == 'J').count();
+            int count_I = (int) number.chars().filter(c -> c == 'I').count();
 
             result += count_N * 3000;
             result += count_M * 1000;

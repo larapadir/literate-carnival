@@ -16,23 +16,23 @@ public class ConverterTests {
     public void ElbonianToArabicSampleTest() throws MalformedNumberException, ValueOutOfBoundsException {
         ElbonianArabicConverter converter = new ElbonianArabicConverter("1");
         assertEquals(converter.toElbonian(), "I");
-        ElbonianArabicConverter converter = new ElbonianArabicConverter("NNNDDDYYYJJJ");
-        assertEquals("9999", converter.toElbonian());
-        ElbonianArabicConverter converter = new ElbonianArabicConverter("NMJI");
-        assertEquals("4004", converter.toElbonian());
-        ElbonianArabicConverter converter = new ElbonianArabicConverter("NNMDYYYJI");
-        assertEquals("7394", converter.toElbonian());
+        converter = new ElbonianArabicConverter("NNNDDDYYYJJJ");
+        assertEquals(9999, converter.toArabic());
+        converter = new ElbonianArabicConverter("NMJI");
+        assertEquals(4004, converter.toArabic());
+         converter = new ElbonianArabicConverter("NNMDYYYJI");
+        assertEquals(7394, converter.toArabic());
     }
 
     @Test
     public void ArabicToElbonianSampleTest() throws MalformedNumberException, ValueOutOfBoundsException {
         ElbonianArabicConverter converter = new ElbonianArabicConverter("I");
         assertEquals(converter.toArabic(), 1);
-        ElbonianArabicConverter converter = new ElbonianArabicConverter("4004");
+         converter = new ElbonianArabicConverter("4004");
         assertEquals("NMJI", converter.toElbonian());
-        ElbonianArabicConverter converter = new ElbonianArabicConverter("9999");
+        converter = new ElbonianArabicConverter("9999");
         assertEquals("NNNDDDYYYJJJ", converter.toElbonian());
-        ElbonianArabicConverter converter = new ElbonianArabicConverter("7394");
+         converter = new ElbonianArabicConverter("7394");
         assertEquals("NNMDYYYJI", converter.toElbonian());
     }
 
@@ -42,79 +42,79 @@ public class ConverterTests {
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest1() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("MNJJ");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest2() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("DMJJ");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest3() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("CDJJ");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest4() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("YCJJ");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest5() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("XYJJ");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest6() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("JXII");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest7() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("IJJ");
     }
 
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest8() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("9 9");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest9() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("N M");
     }
 
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest10() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("DDDC");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest11() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("NNNM");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest12() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("YYYX");
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void malformedNumberTest13() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("JJJI");
     }
 
     @Test(expected = ValueOutOfBoundsException.class)
-    public void valueOutOfBoundsTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void valueOutOfBoundsTest14() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new ValueOutOfBoundsException("0");
     }
 
     @Test(expected = ValueOutOfBoundsException.class)
-    public void valueOutOfBoundsTest() throws MalformedNumberException, ValueOutOfBoundsException {
+    public void valueOutOfBoundsTest15() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new ValueOutOfBoundsException("12000");
     }
 }
