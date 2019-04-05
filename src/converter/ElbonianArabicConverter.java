@@ -51,6 +51,8 @@ public class ElbonianArabicConverter {
 
             }
 
+
+
             int count_N = (int) number.chars().filter(c -> c == 'N').count();
             int count_M = (int)number.chars().filter(c -> c == 'M').count();
             int count_D = (int)number.chars().filter(c -> c == 'D').count();
@@ -149,7 +151,7 @@ public class ElbonianArabicConverter {
 
 
         if (this.toArabic() <= 0 || this.toArabic() > 9999) throw new ValueOutOfBoundsException(number);
-
+        if(number.charAt(0) == '-') throw new ValueOutOfBoundsException("number cannot be negative");
 
 
 

@@ -114,11 +114,6 @@ public class ConverterTests {
     }
 
     @Test(expected = MalformedNumberException.class)
-    public void malformedNumberTest14() throws MalformedNumberException, ValueOutOfBoundsException {
-        throw new MalformedNumberException("-1");
-    }
-
-    @Test(expected = MalformedNumberException.class)
     public void malformedNumberTest16() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new MalformedNumberException("ym");
     }
@@ -128,9 +123,19 @@ public class ConverterTests {
         throw new MalformedNumberException(" ");
     }
 
+    @Test(expected = MalformedNumberException.class)
+    public void malformedNumberTest20() throws MalformedNumberException, ValueOutOfBoundsException {
+        throw new MalformedNumberException("-a ");
+    }
+
     @Test(expected = ValueOutOfBoundsException.class)
     public void valueOutOfBoundsTest14() throws MalformedNumberException, ValueOutOfBoundsException {
         throw new ValueOutOfBoundsException("0");
+    }
+
+    @Test(expected = ValueOutOfBoundsException.class)
+    public void valueOutOfBoundsTest19() throws MalformedNumberException, ValueOutOfBoundsException {
+        throw new ValueOutOfBoundsException("-1");
     }
 
     @Test(expected = ValueOutOfBoundsException.class)
